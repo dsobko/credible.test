@@ -14,7 +14,7 @@ class PersonalLoansRequestPageAssertion(private val personalLoansRequestPage: Pe
         personalLoansRequestPage.apply {
             assertThat(loanAmountField.isDisplayed).isTrue
 //            assertThat(loanPurpose.).isTrue
-            assertThat(highestLevelOfCompletion.isDisplayed).isTrue
+            assertThat(highestLevelOfCompletionDropdown.isDisplayed).isTrue
             assertThat(currentEmploymentStatus.isDisplayed).isTrue
             assertThat(dateOfbirth.isDisplayed).isTrue
             assertThat(employmentIncome.isDisplayed).isTrue

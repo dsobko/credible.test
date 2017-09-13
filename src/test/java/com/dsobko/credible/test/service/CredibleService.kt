@@ -1,6 +1,7 @@
 package com.dsobko.credible.test.service
 
 import com.codeborne.selenide.Condition
+import com.codeborne.selenide.Selenide
 import com.codeborne.selenide.Selenide.open
 import com.dsobko.credible.test.assertions.HomePageAssertion
 import com.dsobko.credible.test.assertions.PersonalLoansPageAssertion
@@ -8,6 +9,7 @@ import com.dsobko.credible.test.pages.HomePage
 import com.dsobko.credible.test.pages.PersonalLoansPage
 import com.dsobko.credible.test.pages.PersonalLoansRequestPage
 import com.dsobko.credible.test.props.CredibleServiceConfigs
+import org.openqa.selenium.By
 import org.slf4j.LoggerFactory.getLogger
 import org.springframework.stereotype.Service
 
@@ -54,13 +56,16 @@ class CredibleService(private val credibleServiceConfigs: CredibleServiceConfigs
     fun enterPersonalLoanRequestData() {
         personalLoansRequestPage!!.apply {
             loanAmountField.value = "15000"
-            loanPurposeFocusser.click()
-            loanPurpose.selectOption(1)
-            highestLevelOfCompletion.selectOption(1)
-            currentEmploymentStatus.selectOption(1)
+            loanPurposeDropdown.click()
+            loanPurpose.click()
+            highestLevelOfCompletionDropdown.click()
+            completedEducation.click()
+            currentEmploymentStatusDropdown.click()
+            currentEmploymentStatus.click()
             dateOfbirth.value = "01011980"
             employmentIncome.value = "15000"
-            creditScore.selectOption(1)
+            creditScoreDropdown.click()
+            creditScore.click()
             continueButton.click()
         }
     }

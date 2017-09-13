@@ -3,27 +3,34 @@ package com.dsobko.credible.test.pages
 import com.codeborne.selenide.Selenide.`$$`
 import com.codeborne.selenide.Selenide.`$`
 import org.openqa.selenium.By
+import org.openqa.selenium.By.*
 
 class PersonalLoansRequestPage {
 
-    val loanAmountField = `$`(By.name("loan_amount"))!!
+    val loanAmountField = `$`(name("loan_amount"))!!
 
-    val loanPurposeFocusser =`$$`("*[class^='select2-container']")[0]!!
+    val loanPurposeDropdown =`$$`("*[class^='select2-container']")[0]!!
 
-    val loanPurpose = `$`(By.name("loan_purpose")!!)
+    val loanPurpose = `$`(id("select2-results-1")!!)
 
-    val highestLevelOfCompletion = `$$`("*[class^='select2-container']")[1]!!
+    val highestLevelOfCompletionDropdown = `$$`("*[class^='select2-container']")[1]!!
 
-    val currentEmploymentStatus = `$$`("*[class^='select2-container']")[2]!!
+    val completedEducation = `$`(id("select2-results-2")!!)
 
-    val dateOfbirth = `$`(By.name("borrower_dob"))!!
+    val currentEmploymentStatusDropdown = `$$`("*[class^='select2-container']")[2]!!
 
-    val employmentIncome = `$`(By.name("employment_income_yearly"))!!
+    val currentEmploymentStatus = `$`(id("select2-results-3")!!)
 
-    val employmentIncomeTooltipText = `$`(By.className("tooltip-text"))!!
+    val dateOfbirth = `$`(name("borrower_dob"))!!
 
-    val creditScore = `$$`("*[class^='select2-container']")[3]!!
+    val employmentIncome = `$`(name("employment_income_yearly"))!!
 
-    val continueButton = `$`(By.className("next-step"))!!
+    val employmentIncomeTooltipText = `$`(className("tooltip-text"))!!
+
+    val creditScoreDropdown = `$$`("*[class^='select2-container']")[3]!!
+
+    val creditScore = `$`(id("select2-results-4")!!)
+
+    val continueButton = `$`(className("next-step"))!!
 
 }

@@ -15,7 +15,7 @@ public class MainConfiguration implements CommandLineRunner {
 
 
     public void run(String... args) {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/dsob/Downloads/chromedriver_win32/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/Temp/chromedriver_win32/chromedriver.exe");
         System.setProperty("selenide.browser", "Chrome");
     }
 }
