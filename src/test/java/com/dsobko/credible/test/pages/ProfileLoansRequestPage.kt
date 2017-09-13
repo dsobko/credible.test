@@ -12,11 +12,25 @@ class ProfileLoansRequestPage {
 
     val phoneNumber = `$`(By.name("borrower_phone"))!!
 
-    val housingStatus = `$$`(By.className("select2-drop select2-display-none bootstrap-dropdown-items select2-with-searchbox select2-drop-active"))[0]!!
+    val housingStatusDropdown = `$$`("*[class^='select2-container']")[4]!!
 
-    val currentAddress = `$`(By.name("current_address_full_address"))!!
+    val housingStatus = `$`(By.id("select2-results-5")!!)
 
-    val citizenshipStatus = `$$`(By.className("select2-drop select2-display-none bootstrap-dropdown-items select2-with-searchbox select2-drop-active"))[1]!!
+    val currentAddressToManualMode = `$`(By.className("to-manual-mode"))!!
+
+    val currentAddressStreet = `$`(By.name("current_address_street"))!!
+
+    val currentAddressCity = `$`(By.name("current_address_city"))!!
+
+    val currentAddressStateDropdown = `$$`("*[class^='select2-container']")[5]!!
+
+    val currentAddressState = `$`(By.id("select2-results-6")!!)
+
+    val currentAddressZipcode = `$`(By.name("current_address_zipcode"))!!
+
+    val citizenshipStatusDropdown = `$$`("*[class^='select2-container']")[6]!!
+
+    val citizenshipStatus = `$`(By.id("select2-results-7")!!)
 
     val borrowerSsn = `$`(By.name("borrower_ssn"))!!
 
