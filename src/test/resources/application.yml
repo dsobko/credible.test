@@ -1,0 +1,11 @@
+logging:
+  level:
+    org.springframework.web: 'INFO'
+  pattern:
+    console: "%date %5level [%thread] -- %-40.40logger{39} {%mdc{scenarioName}}: %msg%n%ex"
+
+credible:
+  service:
+    host: ${CREDIBlE_HOST:https://www.credible.com//?optimizely_disable=true}
+
+
