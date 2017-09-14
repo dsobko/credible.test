@@ -9,5 +9,4 @@ class CredibleServiceConfigs {
 
     lateinit var host: String
 
-
 }

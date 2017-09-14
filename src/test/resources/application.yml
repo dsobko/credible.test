@@ -8,4 +8,11 @@ credible:
   service:
     host: ${CREDIBlE_HOST:https://www.credible.com//?optimizely_disable=true}
 
+chromedriver:
+  path: C:/Temp/chromedriver_win32/chromedriver.exe
+
+common:
+  properties:
+    amountToLoan: 15000
+
 

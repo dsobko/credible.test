@@ -51,6 +51,8 @@ class ProfileLoansRequestPage {
 
     val email = `$`(By.name("email"))!!
 
+    val password = `$`(By.name("password"))!!
+
     val agreeButton = `$`(By.className("send-submission"))!!
 
 

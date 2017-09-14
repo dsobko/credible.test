@@ -1,7 +1,5 @@
 Feature: Credible site basic test feature
 
-
-
   @Ready
   Scenario: basic scenario
     Given Credible home page is opened
