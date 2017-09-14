@@ -15,8 +15,11 @@ Project is built on next technologies and frameworks:
 
 ## Prerequisites
 
-To successfully run project you need Java 8 installed on your machine.
-And also Chrome driver, that can be get from: [Chrome driver Download page](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+1. To successfully run project you need Java 8 installed on your machine.
+2. Chrome driver also should be installed on machine. Can be get from: [Chrome driver Download page](https://sites.google.com/a/chromium.org/chromedriver/downloads)
+
+3. Before running test you should change *application.yml* file (credible.test\src\test\resources\application.yml) and change *chromedriver.path* property with valid path from step 2
+4. Also you can change Credible host, and some other test properties in application.yml file
 
 ## Running tests
 
@@ -33,6 +36,8 @@ on Windows env:
 ```
 gradlew clean test
 ```
+
+This will run all features files available
 
 ## Test report
 

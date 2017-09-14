@@ -19,7 +19,7 @@ import java.util.Arrays.asList
         features = arrayOf("src/test/resources/features"),
         glue = arrayOf("com.dsobko.credible.test"),
         plugin = arrayOf("pretty", "html:build/cucumber-report", "json:build/cucumber.json"),
-        tags = arrayOf("@Ready", "~@NotReady", "~@Bug", "~@Issue", "~@NotImplemented"))
+        tags = arrayOf("@Ready", "~@NotImplemented"))
 object CucumberFeaturesRunner {
 
     init {
