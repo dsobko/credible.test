@@ -1,7 +1,6 @@
 package com.dsobko.credible.test.service
 
 import com.codeborne.selenide.Condition
-import com.codeborne.selenide.Selenide
 import com.codeborne.selenide.Selenide.open
 import com.dsobko.credible.test.assertions.HomePageAssertion
 import com.dsobko.credible.test.assertions.PersonalLoansPageAssertion
@@ -12,7 +11,6 @@ import com.dsobko.credible.test.pages.PersonalLoansPage
 import com.dsobko.credible.test.pages.PersonalLoansRequestPage
 import com.dsobko.credible.test.pages.ProfileLoansRequestPage
 import com.dsobko.credible.test.props.CredibleServiceConfigs
-import org.openqa.selenium.By
 import org.slf4j.LoggerFactory.getLogger
 import org.springframework.stereotype.Service
 import java.time.LocalDateTime
@@ -61,7 +59,8 @@ class CredibleService(private val credibleServiceConfigs: CredibleServiceConfigs
 
         personalLoansRequestPage = PersonalLoansRequestPage()
 
-        personalLoansRequestPage!!.loanAmountField.shouldBe(Condition.visible)
+        personalLoansRequestPage!!.waitForLoading()
+
 
         PersonalLoansRequestPageAssertion(personalLoansRequestPage!!).assertPersonalLoansRequestPage()
     }
@@ -89,7 +88,7 @@ class CredibleService(private val credibleServiceConfigs: CredibleServiceConfigs
 
         profileLoansRequestPage = ProfileLoansRequestPage()
 
-        profileLoansRequestPage!!.firstName.shouldBe(Condition.visible)
+        profileLoansRequestPage!!.waitForLoading()
 
         ProfileLoansRequestPageAssertion(profileLoansRequestPage!!).assertProfileLoansRequestPage()
     }

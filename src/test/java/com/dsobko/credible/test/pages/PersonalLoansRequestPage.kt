@@ -1,11 +1,14 @@
 package com.dsobko.credible.test.pages
 
+import com.codeborne.selenide.Condition
 import com.codeborne.selenide.Selenide.`$$`
 import com.codeborne.selenide.Selenide.`$`
 import org.openqa.selenium.By
 import org.openqa.selenium.By.*
 
 class PersonalLoansRequestPage {
+
+    val personalLoanHeader = `$$`(className("big-title"))!![0]
 
     val loanAmountField = `$`(name("loan_amount"))!!
 
@@ -32,5 +35,9 @@ class PersonalLoansRequestPage {
     val creditScore = `$`(id("select2-results-4")!!)
 
     val continueButton = `$`(className("next-step"))!!
+
+    fun waitForLoading() {
+        personalLoanHeader.shouldBe(Condition.visible)
+    }
 
 }

@@ -1,10 +1,13 @@
 package com.dsobko.credible.test.pages
 
+import com.codeborne.selenide.Condition
 import com.codeborne.selenide.Selenide.`$$`
 import com.codeborne.selenide.Selenide.`$`
 import org.openqa.selenium.By
 
 class ProfileLoansRequestPage {
+
+    val profileHeader = `$$`(By.className("big-title"))!![1]
 
     val firstName = `$`(By.name("borrower_first_name"))!!
 
@@ -37,5 +40,10 @@ class ProfileLoansRequestPage {
     val email = `$`(By.name("email"))!!
 
     val agreeButton = `$`(By.className("send-submission"))!!
+
+
+    fun waitForLoading() {
+        profileHeader.shouldBe(Condition.visible)
+    }
 
 }
