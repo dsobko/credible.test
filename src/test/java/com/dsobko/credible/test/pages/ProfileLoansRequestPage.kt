@@ -15,6 +15,10 @@ class ProfileLoansRequestPage {
 
     val phoneNumber = `$`(By.name("borrower_phone"))!!
 
+    val phoneNumberTooltip = `$$`(By.className("tooltip-text"))!![1]
+
+    val phoneNumberTooltipText = `$$`(By.className("tooltip-text"))!![1].getAttribute("data-original-title")
+
     val housingStatusDropdown = `$$`("*[class^='select2-container']")[4]!!
 
     val housingStatus = `$`(By.id("select2-results-5")!!)
@@ -35,7 +39,15 @@ class ProfileLoansRequestPage {
 
     val citizenshipStatus = `$`(By.id("select2-results-7")!!)
 
+    val citizenshipStatusTooltip = `$$`(By.className("tooltip-text"))!![2]
+
+    val citizenshipStatusTooltipText = `$$`(By.className("tooltip-text"))!![2].getAttribute("data-original-title")
+
     val borrowerSsn = `$`(By.name("borrower_ssn"))!!
+
+    val borrowerSsnTooltip = `$$`(By.className("tooltip-text"))!![3]
+
+    val borrowerSsnTooltipText = `$$`(By.className("tooltip-text"))!![3].getAttribute("data-original-title")
 
     val email = `$`(By.name("email"))!!
 

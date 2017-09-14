@@ -12,6 +12,9 @@ class PersonalLoansPageAssertion(private val personalLoansPage: PersonalLoansPag
     fun assertPersonalLoansPage(): PersonalLoansPageAssertion {
         log.info("Asserting personal loans page elements")
         personalLoansPage.apply {
+            assertThat(title.isDisplayed).isTrue
+            assertThat(title.text).isEqualTo("Personal loans to get you" +
+                    " one step ahead\nRates from 4.99% APR in just 2 minutes")
             assertThat(loanAmountField.isDisplayed).isTrue
         }
         return this

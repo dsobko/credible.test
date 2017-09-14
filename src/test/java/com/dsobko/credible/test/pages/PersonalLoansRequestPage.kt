@@ -28,7 +28,9 @@ class PersonalLoansRequestPage {
 
     val employmentIncome = `$`(name("employment_income_yearly"))!!
 
-    val employmentIncomeTooltipText = `$`(className("tooltip-text"))!!
+    val employmentIncomeTooltip = `$$`(className("tooltip-text"))!![0]
+
+    val employmentIncomeTooltipText = `$$`(className("tooltip-text"))!![0].getAttribute("data-original-title")
 
     val creditScoreDropdown = `$$`("*[class^='select2-container']")[3]!!
 

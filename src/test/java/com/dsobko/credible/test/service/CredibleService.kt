@@ -62,7 +62,10 @@ class CredibleService(private val credibleServiceConfigs: CredibleServiceConfigs
         personalLoansRequestPage!!.waitForLoading()
 
 
-        PersonalLoansRequestPageAssertion(personalLoansRequestPage!!).assertPersonalLoansRequestPage()
+        PersonalLoansRequestPageAssertion(personalLoansRequestPage!!)
+                .assertHeader()
+                .assertPersonalLoansRequestPage()
+                .assertTooltips()
     }
 
     fun enterPersonalLoanRequestData() {
@@ -90,7 +93,10 @@ class CredibleService(private val credibleServiceConfigs: CredibleServiceConfigs
 
         profileLoansRequestPage!!.waitForLoading()
 
-        ProfileLoansRequestPageAssertion(profileLoansRequestPage!!).assertProfileLoansRequestPage()
+        ProfileLoansRequestPageAssertion(profileLoansRequestPage!!)
+                .assertHeader()
+                .assertProfileLoansRequestPage()
+                .assertTooltips()
     }
 
     fun enterProfileLoanRequestData() {
