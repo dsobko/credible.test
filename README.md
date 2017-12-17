@@ -6,7 +6,7 @@ This project contains BDD scenario to test basic flow of credible.com site
 
 Project is built on next technologies and frameworks:
 
-* Java
+* Kotlin (You can also retrieve Java version reverting commit bb45de1)
 * Spring Boot - DI framework
 * Gradle - Dependency Management
 * Selenide - Selenium library extension
